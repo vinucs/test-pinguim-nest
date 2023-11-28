@@ -24,8 +24,7 @@ export class PinguimService {
   }
 
   async update(id: string, updatePinguimDTO: PinguimDTO){
-    return await this.pinguimModel.updateOne({_id: id,}, {  
-      name: updatePinguimDTO.name})
+    return await this.pinguimModel.updateOne({_id: id,}, updatePinguimDTO)
   }
 
   async delete(id: string) {
